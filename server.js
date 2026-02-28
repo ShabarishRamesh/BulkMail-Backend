@@ -12,9 +12,7 @@ app.use(cors());
 const connectDB = () => {
   return new Promise((resolve, reject) => {
     mongoose
-      .connect(
-        "mongodb+srv://Shabarish:DB%40CODE@cluster0.u4b8yzz.mongodb.net/BulkMail"
-      )
+      .connect(process.env.MONGO_URI)
       .then(() => resolve("✅ Connected to MongoDB"))
       .catch((err) => reject("❌ DB Error: " + err));
   });
