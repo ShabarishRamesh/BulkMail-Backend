@@ -88,6 +88,6 @@ app.post("/send-email", (req, res) => {
     });
 });
 
-app.listen(3500, () => {
-  console.log("🔥 Server running on port 3500");
+app.listen(process.env.PORT || 5000, () => {
+  console.log("🔥 Server running on port 5000");
 });
